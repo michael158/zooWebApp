@@ -1,0 +1,37 @@
+<h1> Filhotes de Focas</h1>
+
+<div class="table-responsive-vertical shadow-z-1">
+    <table class="table table-bordered material-design-table">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>Mãe</th>
+            <th>Situação</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="baby in babies.data">
+            <td data-title="Nome"> {{ baby.name }}</td>
+            <td data-title="Data de Nascimento"> {{ baby.date_birth }}</td>
+            <td data-title="Mãe"> {{ baby.mother.name }}</td>
+            <td data-title="Situação"> {{ status[baby.live] }}</td>
+            <td data-title="Ações">  <lx-dropdown lx-position="right" lx-over-toggle="true">
+                <lx-dropdown-toggle>
+                    <lx-button lx-size="l" lx-color="black" lx-type="icon"><i class="mdi mdi-dots-vertical"></i></lx-button>
+                </lx-dropdown-toggle>
+
+                <lx-dropdown-menu>
+                    <ul>
+                        <li><a class="dropdown-link" href="/#/baby-seals/view/{{ baby.id }}"><i class="mdi mdi-eye"></i> Visualizar</a></li>
+                        <li><a class="dropdown-link" href="/#/baby-seals/edit/{{ baby.id }}"><i class="mdi mdi-pencil"></i> Editar</a></li>
+                        <li><a class="dropdown-link" href="/#/baby-seals/delete/{{ baby.id }}"><i class="mdi mdi-delete"></i> Excluir</a></li>
+                    </ul>
+                </lx-dropdown-menu>
+            </lx-dropdown>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

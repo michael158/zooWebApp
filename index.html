@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>ZOO Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS STYLES [INIT] -->
+    <link rel="stylesheet" href="css/lumx.css">
+    <link rel="stylesheet" href="css/materialdesignicons.css">
+    <link rel="stylesheet" href="css/md-responsive-table.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/loading-bar.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- CSS STYLES [END] -->
+
+    <base href="/">
+</head>
+<body>
+
+
+<div class="sidebar-overlay"></div>
+<aside id="sidebar" class="sidebar sidebar-default" role="navigation">
+    <ul class="nav sidebar-nav">
+        <li><a href="/#/seals">Focas</a></li>
+        <li><a href="/#/baby-seals">Filhotes de Foca</a></li>
+    </ul>
+</aside>
+
+<!-- TOOLBAR [INIT] -->
+<header>
+    <div class="toolbar bgc-red-600 tc-white">
+        <div class="toolbar__left mr++">
+            <lx-button lx-size="l" lx-color="white" class="sidebar-toggle" lx-type="icon"><i class="mdi mdi-menu"></i></lx-button>
+        </div>
+        <span class="toolbar__label fs-title">Zoo Manager</span>
+
+        <div class="toolbar__right">
+
+            <lx-dropdown lx-position="right" lx-over-toggle="true">
+                <lx-dropdown-toggle>
+                    <lx-button lx-size="l" lx-color="white" lx-type="icon"><i class="mdi mdi-dots-vertical"></i>
+                    </lx-button>
+                </lx-dropdown-toggle>
+
+                <lx-dropdown-menu>
+                    <ul>
+                        <li><a href="/#/seals/add" class="dropdown-link"><i class="mdi mdi-plus"></i> Cadastrar Foca</a>
+                        </li>
+                        <li><a href="/#/baby-seals/add" class="dropdown-link"><i class="mdi mdi-plus"></i> Cadastrar
+                            Filhote de Foca</a></li>
+                    </ul>
+                </lx-dropdown-menu>
+            </lx-dropdown>
+        </div>
+    </div>
+</header>
+<!-- TOOLBAR [END] -->
+
+<div class="wrapper">
+    <section id="content">
+        <div class="container p+" ng-view>
+
+        </div>
+    </section>
+</div>
+
+
+<!-- JS PLUGINS [INIT] -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.min.js"></script>
+<script type="text/javascript" src="js/angular-resource.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/velocity.min.js"></script>
+<script type="text/javascript" src="js/lumx.min.js"></script>
+<script type="text/javascript" src="js/md-responsive-table.js"></script>
+<script type="text/javascript" src="js/sidebar.js"></script>
+<script type="text/javascript" src="js/loading-bar.min.js"></script>
+<!-- JS PLUGINS [END] -->
+
+<!-- ANGULAR APPLICATION SCRIPTS [INIT] -->
+
+<!-- CONFIGS -->
+<script type="text/javascript" src="app/bootstrap.js"></script>
+
+<!-- CONTROLLERS -->
+
+<script type="text/javascript" src="app/controllers/seals/listSealsController.js"></script>
+<script type="text/javascript" src="app/controllers/seals/addSealsController.js"></script>
+<script type="text/javascript" src="app/controllers/seals/editSealsController.js"></script>
+<script type="text/javascript" src="app/controllers/seals/viewSealsController.js"></script>
+<script type="text/javascript" src="app/controllers/seals/deleteSealsController.js"></script>
+
+
+<script type="text/javascript" src="app/controllers/baby-seals/listBabiesController.js"></script>
+<script type="text/javascript" src="app/controllers/baby-seals/addBabiesController.js"></script>
+<script type="text/javascript" src="app/controllers/baby-seals/editBabiesController.js"></script>
+<script type="text/javascript" src="app/controllers/baby-seals/viewBabiesController.js"></script>
+<script type="text/javascript" src="app/controllers/baby-seals/deleteBabiesController.js"></script>
+
+<!-- SERVICES -->
+<script type="text/javascript" src="app/services/sealService.js"></script>
+<script type="text/javascript" src="app/services/babySealService.js"></script>
+
+<!-- DIRECTIVES -->
+
+<!-- ANGULAR APPLICATION SCRIPTS [END] -->
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<h1>Deseja realmente deletar a o filhote de Foca ?</h1>
+
+<div class="card">
+    <form class="p+" ng-submit="save()">
+        <div flex-container="row" flex-column="12">
+            <div flex-item="12">
+                <lx-text-field lx-label="Nome">
+                    <input type="text" ng-model="baby.name" disabled="disabled">
+                </lx-text-field>
+
+                <lx-text-field lx-label="Data de Nascimento">
+                    <input type="text" ng-model="baby.date_birth" disabled="disabled">
+                </lx-text-field>
+
+                <lx-text-field lx-label="Status">
+                    <input type="text" ng-model="baby.live" disabled="disabled">
+                </lx-text-field>
+
+                <lx-text-field lx-label="Mãe">
+                    <input type="text" ng-model="baby.mother.name" disabled="disabled">
+                </lx-text-field>
+            </div>
+        </div>
+
+            <div class="text-center p+">
+                <lx-button lx-type="fab" lx-color="red" lx-size="xl" type="submit"><i class="mdi mdi-delete"></i></lx-button>
+            </div>
+    </form>
+</div>

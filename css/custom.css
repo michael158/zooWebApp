@@ -1,0 +1,37 @@
+.p-t-20{
+    padding-top: 20px;
+}
+
+.m-t-10{
+    margin-top: 10px
+}
+
+.alert{
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.alert-info{
+    color: #31708f;
+    background-color: #d9edf7;
+    border : 2px solid #bce8f1;
+
+}
+
+.alert-warning{
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border : 2px solid #faebcc;
+}
+
+.sidebar{
+    position: absolute;
+    z-index: 99999;
+    border: 1px solid #dddddd;
+}
+
+.wrapper {
+    display: block;
+}
+

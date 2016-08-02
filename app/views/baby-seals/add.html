@@ -1,0 +1,59 @@
+<h1>Cadastrar Filhote de Foca</h1>
+
+<div class="card">
+    <form class="p+" ng-submit="save()">
+        <div flex-container="row" flex-column="12">
+            <div flex-item="12">
+                <lx-text-field lx-label="Nome">
+                    <input type="text" ng-model="baby.name">
+                </lx-text-field>
+
+                <lx-date-picker ng-model="baby.date_birth"
+                                lx-input-format="LL"
+                                lx-color="red"
+                                lx-locale="pt">
+                    <lx-text-field lx-allow-clear="true" lx-label="Data de Nascimento">
+                        <input type="text" ng-model="baby.dateMask">
+                    </lx-text-field>
+                </lx-date-picker>
+
+                <lx-select ng-model="baby.seal_id"
+                           lx-allow-clear="true"
+                           lx-choices="mothers"
+                           lx-display-filter="true"
+                           lx-fixed-label="true"
+                           selection-to-model="textToObjectMethod(data, callback)"
+                           model-to-selection="objectMethodToText(data, callback)"
+                           lx-label="Mãe">
+                    <lx-select-selected>
+                        {{ $selected.name }}
+                    </lx-select-selected>
+
+                    <lx-select-choices>
+                        {{ $choice.name }}
+                    </lx-select-choices>
+                </lx-select>
+
+
+                <lx-select ng-model="baby.live"
+                           lx-allow-clear="true"
+                           lx-choices="status"
+                           lx-display-filter="true"
+                           lx-fixed-label="true"
+                           lx-label="Status">
+                    <lx-select-selected>
+                        {{ $selected.name }}
+                    </lx-select-selected>
+
+                    <lx-select-choices>
+                        {{ $choice.name }}
+                    </lx-select-choices>
+                </lx-select>
+            </div>
+        </div>
+
+            <div class="text-center p+">
+                <lx-button lx-type="fab" lx-color="red" lx-size="xl" type="submit"><i class="mdi mdi-check"></i></lx-button>
+            </div>
+    </form>
+</div>

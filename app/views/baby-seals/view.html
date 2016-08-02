@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="p+">
+        <div class="text-center">
+            <h1>Filhote</h1>
+        </div>
+
+        <div flex-container="row" flex-column="12">
+            <div flex-item="12">
+                <label>Nome:</label>
+                {{ baby.name }}</br>
+
+                <label>Data de Nascimento:</label>
+                {{ baby.date_birth }}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="card m-t-10" ng-if="baby.mother">
+    <div class="p+">
+        <div class="text-center" >
+            <h1> Mãe</h1>
+        </div>
+
+        <div flex-container="row" flex-column="12">
+            <div flex-item="12">
+                <label>Nome:</label>
+                {{ baby.mother.name }}</br>
+
+                <label>Data de Nascimento:</label>
+                {{ baby.mother.date_birth }}
+            </div>
+        </div>
+
+    </div>
+</div>
+

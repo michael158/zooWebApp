@@ -1,0 +1,40 @@
+<div class="text-center">
+    <h1>Foca</h1>
+</div>
+
+<div class="card">
+    <div class="p+">
+        <div flex-container="row" flex-column="12">
+            <div flex-item="12">
+                <label>Nome:</label>
+                {{ seal.name }}</br>
+
+                <label>Data de Nascimento:</label>
+                {{ seal.date_birth }}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="text-center" ng-if="seal.babies.length > 0">
+    <h1> Filhotes</h1>
+</div>
+<div class="table-responsive-vertical shadow-z-1"  ng-if="seal.babies.length > 0">
+    <table class="table table-bordered material-design-table">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>Situação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="baby in seal.babies">
+            <td data-title="Nome"> {{ baby.name }}</td>
+            <td data-title="Data de Nascimento"> {{ baby.date_birth }}</td>
+            <td data-title="Situação"> {{ status[baby.live] }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
